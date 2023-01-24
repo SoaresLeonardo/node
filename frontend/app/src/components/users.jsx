@@ -11,7 +11,7 @@ export default function Users() {
       .get("/users")
       .then((response) => setUsers(response.data))
       .catch((error) => {
-        console.error("Error:" + error);
+        console.error("Erro:" + error);
       });
   }, []);
 
@@ -33,8 +33,7 @@ export default function Users() {
                 <br />
                 <b>Senha: </b>
                 {user.password}
-                <br />
-                <br />
+                <br /><br />
               </li>
             </ul>
           ))}
@@ -43,8 +42,3 @@ export default function Users() {
     </div>
   );
 }
-
-// <h2>Usuários:</h2>
-//             <h3>Nome usuario</h3>
-//             <p>nomeUsuario@gmail.com</p>
-//             <p>pessoaPassword123</p>
